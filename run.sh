@@ -45,7 +45,7 @@ run() {
     shift
     $folder/run.sh -t $tag $*
   else
-    docker run --rm -t -i -v $RPMDIR:/home/build/rpmbuild $tag
+    docker run --rm -t -i -u build -v $RPMDIR:/home/build/rpmbuild $tag
   fi
 
 }
